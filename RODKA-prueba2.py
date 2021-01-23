@@ -221,17 +221,17 @@ conexion.execute_web_scrapping(pagina_web,url_pagina,url_busqueda)
 
 
 
-#for j in range(1,numeroOfertas,1):
+for j in range(1,numeroOfertas,1):
     
-#    if type(descripciones[j]) == float: 
-#        descripciones[j] = "No detallado"  
-#    elif len(descripciones[j]) > 1990:
-#        descripciones[j] = cortarStringDel(descripciones[j],1990)
+    if type(descripciones[j]) == float: 
+        descripciones[j] = "No detallado"  
+    elif len(descripciones[j]) > 1990:
+        descripciones[j] = cortarStringDel(descripciones[j],1990)
 
-#    if type(Lugares[j]) == float: 
-#        Lugares[j] = "No detallado"  
-#    elif len(Lugares[j]) > 1990:
-#        Lugares[j] = cortarStringDel(Lugares[j],1990)
+    if type(Lugares[j]) == float: 
+        Lugares[j] = "No detallado"  
+    elif len(Lugares[j]) > 1990:
+        Lugares[j] = cortarStringDel(Lugares[j],1990)
 
-#    conexion.execute_oferta(titulos[j],Lugares[j],precios[j],Url_Pagina_Ofertas[j],Url_Busquedas[j],descripciones[j],descripciones[j])
-#    print("Se inserto Registro")
+    conexion.execute_oferta(titulos[j],Lugares[j],precios[j],Url_Pagina_Ofertas[j],Url_Busquedas[j],descripciones[j],descripciones[j])
+    print("Se inserto Registro")
